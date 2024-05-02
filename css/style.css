@@ -110,7 +110,7 @@ address {
   font-style: normal;
 }
 
-.lock body {
+body {
   overflow: hidden;
   -ms-touch-action: none;
       touch-action: none;
@@ -448,7 +448,7 @@ address {
 .about__image::after {
   content: "";
   position: absolute;
-  top: -9%;
+  top: -3%;
   left: -7%;
   width: 96%;
   height: 91%;
@@ -912,11 +912,14 @@ address {
   position: relative;
 }
 
-.no-webp .right-videos::after {
+.right-videos__wrapper {
+  position: relative;
+}
+
+.no-webp .right-videos__btn {
   background: url("../img/videos/play.png") 50%/100% no-repeat; }
 
-.right-videos::after {
-  content: "";
+.right-videos__btn {
   position: absolute;
   left: 50%;
   bottom: 4.9375rem;
@@ -925,10 +928,6 @@ address {
           transform: translate(-50%, 0);
   width: 16.25rem;
   height: 6.25rem;
-}
-
-.right-videos__wrapper {
-  position: relative;
 }
 
 .right-videos__arrs {
@@ -1178,6 +1177,101 @@ address {
   height: 18.625rem;
 }
 
+.cases {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+}
+
+.cases::before,
+.cases::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.no-webp .cases::after {
+  background: url("../img/cases/shadow-left.png") 50%/cover no-repeat; }
+
+.cases::after {
+  bottom: 0;
+  left: 0;
+  width: 23.375rem;
+  height: 100%;
+}
+
+.no-webp .cases::before {
+  background: url("../img/cases/shadow-right.png") 50%/100% no-repeat; }
+
+.cases::before {
+  content: "";
+  right: 0rem;
+  top: 0;
+  width: 8.125rem;
+  height: 17.0625rem;
+}
+
+.cases__body {
+  padding: 1.8125rem 0rem 5.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+
+.cases__logo {
+  width: 21.5rem;
+  height: 4.75rem;
+}
+
+.cases__logo:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.cases__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.cases__slider {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.slide-cases {
+  position: relative;
+  max-height: 21.4375rem;
+  max-width: 36.4375rem;
+  margin-top: 3.375rem;
+  -webkit-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+}
+
+.slide-cases.swiper-slide-active {
+  margin-top: 0;
+  -webkit-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+  max-width: 50.75rem;
+  max-height: 29.875rem;
+}
+
+.slide-cases img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 61.99875em) {
   .about__content {
     -webkit-box-flex: 0;
@@ -1292,7 +1386,7 @@ address {
     min-height: 20.6875rem;
   }
 
-  .right-videos::after {
+  .right-videos__btn {
     width: 11.375rem;
     height: 4.375rem;
   }
@@ -1538,6 +1632,26 @@ address {
         align-self: flex-end;
     font-size: 2.8125rem;
   }
+
+  .cases__body {
+    padding: 2.5rem 0rem 5.6875rem;
+  }
+
+  .cases__logo {
+    width: 18.3125rem;
+    height: 4rem;
+  }
+
+  .slide-cases {
+    max-height: 17.125rem;
+    max-width: 29.125rem;
+    margin-top: 1.25rem;
+  }
+
+  .slide-cases.swiper-slide-active {
+    max-width: 40.5625rem;
+    max-height: 23.875rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -1622,6 +1736,14 @@ address {
     display: none;
   }
 
+  .videos::after {
+    width: 48.875rem;
+    height: 10.75rem;
+    -webkit-transform: translate(-50%, -50%) rotate(-60deg);
+        -ms-transform: translate(-50%, -50%) rotate(-60deg);
+            transform: translate(-50%, -50%) rotate(-60deg);
+  }
+
   .videos::before {
     width: 16.625rem;
     height: 15.9375rem;
@@ -1645,6 +1767,12 @@ address {
   .right-videos {
     width: 26.875rem;
     height: 25.625rem;
+  }
+
+  .right-videos__btn {
+    width: 16.25rem;
+    height: 6.25rem;
+    bottom: 4.25rem;
   }
 
   .right-videos__arrs {
@@ -1708,6 +1836,29 @@ address {
     width: 23.25rem;
     height: 13.125rem;
   }
+
+  .cases__body {
+    padding: 4.125rem 0rem 4.9375rem;
+  }
+
+  .cases__logo:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  .cases__logo:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .slide-cases {
+    max-height: 39.5rem;
+    max-width: 23.375rem;
+    margin-top: 0;
+  }
+
+  .slide-cases.swiper-slide-active {
+    max-height: 39.5rem;
+    max-width: 23.375rem;
+  }
 }
 
 @media (max-width: 29.99875em) {
@@ -1744,16 +1895,17 @@ address {
     font-size: 0.9375rem;
   }
 
-  .right-videos {
-    margin-left: -1.25rem;
-  }
-
   .descrs__logo {
     width: 16.1875rem;
     height: 3.5625rem;
   }
 
   .video__logo {
+    width: 16.1875rem;
+    height: 3.5625rem;
+  }
+
+  .cases__logo {
     width: 16.1875rem;
     height: 3.5625rem;
   }
@@ -1782,7 +1934,18 @@ address {
 
   .right-videos {
     width: 100%;
-    margin-left: 0;
+    width: 17.5rem;
+    padding-top: 6.25rem;
+  }
+
+  .right-videos__btn {
+    width: 10.75rem;
+    height: 4.125rem;
+    bottom: 7.1875rem;
+  }
+
+  .right-videos__slider {
+    max-width: 12.5rem;
   }
 
   .descrs__image_2 {
@@ -1806,6 +1969,16 @@ address {
     height: 9.1875rem;
     top: 0.4375rem;
     left: 0.4375rem;
+  }
+
+  .slide-cases {
+    max-height: 27.625rem;
+    max-width: 16.375rem;
+  }
+
+  .slide-cases.swiper-slide-active {
+    max-height: 27.625rem;
+    max-width: 16.375rem;
   }
 }
 
@@ -1854,13 +2027,17 @@ address {
 
 .webp .right-videos { background: url(../img/videos/tv.webp) 50%/100% no-repeat; }
 
-.webp .right-videos::after { background: url(../img/videos/play.webp) 50%/100% no-repeat; }
+.webp .right-videos__btn { background: url(../img/videos/play.webp) 50%/100% no-repeat; }
 
 .webp .descrs::after { background: url(../img/descrs/shadow.webp) top right/100% no-repeat; }
 
 .webp .video::after { background: url(../img/video/shadow.webp) 0 0%/100% no-repeat; }
 
 .webp .video__image { background: url(../img/video/imac.webp) 50%/100% no-repeat; }
+
+.webp .cases::after { background: url(../img/cases/shadow-left.webp) 50%/cover no-repeat; }
+
+.webp .cases::before { background: url(../img/cases/shadow-right.webp) 50%/100% no-repeat; }
 
 @media (max-width: 47.99875em) {
 
