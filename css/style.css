@@ -110,12 +110,6 @@ address {
   font-style: normal;
 }
 
-body {
-  overflow: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
-}
-
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -1734,6 +1728,13 @@ body {
     font-size: 1.5625rem;
   }
 
+  .no-webp .reviews__scroll::after {
+    background-image: url("../img/reviews/bottom-mob.png"); }
+
+  .reviews__scroll::after {
+    height: 50vw;
+  }
+
   .reviews__body {
     padding: 4.125rem 0rem 4.0625rem;
   }
@@ -2048,6 +2049,11 @@ body {
 .webp .cases__scroll::after { background: url(../img/cases/shadow-left.webp) 50%/cover no-repeat; }
 
 .webp .cases__scroll::before { background: url(../img/cases/shadow-right.webp) 50%/100% no-repeat; }
+
+@media (max-width: 47.99875em) {
+
+  .webp .reviews__scroll::after { background-image: url(../img/reviews/bottom-mob.webp); }
+}
 
 @media (max-width: 47.99875em) {
 
