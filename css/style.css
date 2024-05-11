@@ -483,7 +483,7 @@ address {
 }
 
 .author__body {
-  padding: 1.8125rem 0rem 2.8125rem;
+  padding: 1.5625rem 0rem 2.8125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,7 +504,7 @@ address {
 }
 
 .author__logo:not(:last-child) {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9375rem;
 }
 
 .author__logo img {
@@ -834,7 +834,7 @@ address {
   content: "";
   position: absolute;
   right: 0;
-  bottom: -0.625rem;
+  bottom: 0rem;
   width: 23.75rem;
   height: 22.75rem;
   z-index: 2;
@@ -878,6 +878,12 @@ address {
       align-self: center;
 }
 
+.videos__row_masters {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .left-videos {
   min-width: 0;
   color: #fff;
@@ -892,6 +898,10 @@ address {
 
 .left-videos span:not(:last-child) {
   margin-bottom: 1.625rem;
+}
+
+.left-videos_masters span {
+  font-size: 1.375rem;
 }
 
 .left-videos p {
@@ -913,8 +923,54 @@ address {
   position: relative;
 }
 
+.right-videos_masters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0rem;
+  position: relative;
+}
+
 .right-videos__wrapper {
   position: relative;
+}
+
+.right-videos__pagination {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.right-videos__pagination .swiper-pagination-bullet {
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0.5625rem;
+          flex: 0 0 0.5625rem;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.right-videos__pagination .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 0.3125rem;
+}
+
+.right-videos__pagination .swiper-pagination-bullet-active {
+  background: #fff;
 }
 
 .no-webp .right-videos__btn {
@@ -980,6 +1036,7 @@ address {
 
 .right-videos__slide img {
   width: 100%;
+  height: auto;
 }
 
 .descrs__scroll {
@@ -1010,7 +1067,7 @@ address {
 .descrs__scroll::before {
   content: "";
   position: absolute;
-  bottom: -4.375rem;
+  bottom: 0rem;
   right: 0;
   width: 21.375rem;
   height: 28.75rem;
@@ -1276,6 +1333,12 @@ address {
   height: 100%;
 }
 
+@media (min-width: 47.99875em) {
+  .right-videos__pagination {
+    display: none;
+  }
+}
+
 @media (min-width: 61.99875em) {
   .about__content {
     -webkit-box-flex: 0;
@@ -1390,6 +1453,10 @@ address {
     min-height: 20.6875rem;
   }
 
+  .right-videos_masters {
+    padding-top: 0rem;
+  }
+
   .right-videos__btn {
     width: 11.375rem;
     height: 4.375rem;
@@ -1438,7 +1505,7 @@ address {
   }
 
   .about__logo:not(:last-child) {
-    margin-bottom: 1.875rem;
+    margin-bottom: 0.9375rem;
   }
 
   .about__row {
@@ -1446,7 +1513,7 @@ address {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.625rem;
   }
 
   .about__right {
@@ -1464,7 +1531,7 @@ address {
   }
 
   .about__image {
-    max-width: 28.125rem;
+    max-width: 25rem;
   }
 
   .author__scroll::after {
@@ -1473,7 +1540,7 @@ address {
   }
 
   .author__body {
-    padding: 2.5rem 0rem 4.0625rem;
+    padding: 1.875rem 0rem 2.5rem;
   }
 
   .author__logo {
@@ -1574,8 +1641,16 @@ address {
     margin-bottom: 1.25rem;
   }
 
+  .left-videos_masters span {
+    font-size: 1.375rem;
+  }
+
   .right-videos {
     margin: 0 auto;
+  }
+
+  .right-videos__pagination:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 
   .right-videos__slider {
@@ -1638,7 +1713,7 @@ address {
   }
 
   .cases__body {
-    padding: 2.5rem 0rem 5.6875rem;
+    padding: 1.25rem 0rem 5.6875rem;
   }
 
   .cases__logo {
@@ -1685,7 +1760,7 @@ address {
   }
 
   .about__body {
-    padding: 4.125rem 0rem 4.0625rem;
+    padding: 1.25rem 0rem 3.4375rem;
   }
 
   .about__content p {
@@ -1693,7 +1768,7 @@ address {
   }
 
   .about__content p:not(:last-child) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.625rem;
   }
 
   .about__content p:first-child {
@@ -1701,8 +1776,8 @@ address {
   }
 
   .author__scroll::after {
-    width: 52.125rem;
-    height: 11.5rem;
+    width: 41.6875rem;
+    height: 9.1875rem;
     -webkit-transform: translate(-50%, -50%) rotate(-70deg);
         -ms-transform: translate(-50%, -50%) rotate(-70deg);
             transform: translate(-50%, -50%) rotate(-70deg);
@@ -1772,12 +1847,20 @@ address {
     margin-bottom: 1.0625rem;
   }
 
+  .left-videos_masters span {
+    font-size: 1.5rem;
+  }
+
   .no-webp .right-videos {
     background-image: url("../img/videos/tv-mob.png"); }
 
   .right-videos {
     width: 26.875rem;
     height: 25.625rem;
+  }
+
+  .right-videos__wrapper:not(:last-child) {
+    margin-bottom: 0.625rem;
   }
 
   .right-videos__btn {
@@ -1849,7 +1932,7 @@ address {
   }
 
   .cases__body {
-    padding: 4.125rem 0rem 4.9375rem;
+    padding: 1.875rem 0rem 3.75rem;
   }
 
   .cases__logo:not(:last-child) {
@@ -1881,6 +1964,10 @@ address {
   .about__logo {
     width: 16.1875rem;
     height: 3.5625rem;
+  }
+
+  .about__image {
+    max-width: 90%;
   }
 
   .author__logo {
@@ -1955,8 +2042,13 @@ address {
     bottom: 7.1875rem;
   }
 
+  .right-videos__arr {
+    display: none;
+  }
+
   .right-videos__slider {
-    max-width: 12.5rem;
+    max-width: 11.25rem;
+    aspect-ratio: 16/9;
   }
 
   .descrs__image_2 {
