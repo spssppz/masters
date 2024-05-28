@@ -258,55 +258,47 @@ body {
   font-weight: 700;
 }
 
-/*
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
 }
-*/
+
+.menu-mob {
+  position: fixed;
+  left: -100%;
+  -webkit-transition: left 0.3s ease 0s;
+  transition: left 0.3s ease 0s;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.menu-open .menu-mob {
+  left: 0;
+}
+
+.menu-mob__list {
+  text-align: center;
+}
+
+.menu-mob__item:not(:last-child) {
+  margin-bottom: 2.8125rem;
+}
+
+.menu-mob__link {
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.75rem;
+}
 
 .hero__scroll {
   display: -webkit-box;
@@ -379,6 +371,10 @@ body {
   font-size: 1.375rem;
   color: #000;
   font-family: "Unbounded", sans-serif;
+}
+
+.about .icon-menu {
+  top: 2.1875rem;
 }
 
 .about__scroll {
@@ -461,6 +457,10 @@ body {
 .about__image img {
   width: 100%;
   height: auto;
+}
+
+.author .icon-menu {
+  top: 2.8125rem;
 }
 
 .author__scroll {
@@ -1344,6 +1344,10 @@ body {
   left: 0.8125rem;
   width: 33.125rem;
   height: 18.625rem;
+}
+
+.cases .icon-menu {
+  top: 2.5rem;
 }
 
 .cases__scroll {
@@ -2653,6 +2657,10 @@ body {
 }
 
 @media (min-width: 47.99875em) {
+  .menu-mob {
+    display: none;
+  }
+
   .right-videos__pagination {
     display: none;
   }
@@ -3242,6 +3250,76 @@ body {
     height: 2rem;
   }
 
+  .icon-menu {
+    display: block;
+    position: absolute;
+    left: 1.25rem;
+    top: 5rem;
+    background: none;
+    width: 1.875rem;
+    height: 1.3125rem;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    border-radius: 0.1875rem;
+    width: 79%;
+    height: 0.1875rem;
+    background-color: #000;
+  }
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .icon-menu span {
+    top: calc(50% - 0.09375rem);
+    right: auto;
+    left: 0;
+  }
+
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+
+  .menu-open .icon-menu::before {
+    top: calc(50% - 0.09375rem);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 0.09375rem);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  .icon-menu_d span,
+  .icon-menu_d::before,
+  .icon-menu_d::after {
+    background-color: #fff;
+  }
+
+  .menu-open .icon-menu_d span,
+  .menu-open .icon-menu_d::before,
+  .menu-open .icon-menu_d::after {
+    background-color: #000;
+  }
+
   .hero__body {
     padding: 4.125rem 0rem 4.9375rem;
   }
@@ -3636,6 +3714,7 @@ body {
     content: "";
     position: absolute;
     top: 2%;
+    pointer-events: none;
     right: 0;
     width: 100%;
     height: 24.4375rem;
