@@ -112,12 +112,6 @@ address {
   font-style: normal;
 }
 
-body {
-  overflow: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
-}
-
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -158,7 +152,6 @@ body {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   margin: 0 auto;
-  width: 100%;
   padding: 0 1.25rem;
 }
 
@@ -172,13 +165,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.4375rem 2.6875rem 1.9375rem 3.125rem;
   font-size: 1.125rem;
   color: #fff;
   background-color: #000;
   border-radius: 60%;
   font-family: "Unbounded", sans-serif;
   position: relative;
+  padding: 1.4375rem 2.6875rem 1.9375rem 3.125rem;
 }
 
 .no-webp .btn::after{
@@ -1001,6 +994,19 @@ body {
   pointer-events: none;
 }
 
+.no-webp .videos__shadow{
+  background: url("../img/videos/mob-shadow.png") 50%/100% no-repeat; }
+
+.videos__shadow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 14.0625rem;
+  width: 25.125rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
 .videos__decor {
   position: absolute;
   pointer-events: none;
@@ -1579,6 +1585,88 @@ body {
 .slide-cases img {
   width: 100%;
   height: 100%;
+}
+
+.last-slide-cases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem 2.0625rem;
+}
+
+.last-slide-cases__title {
+  width: 20rem;
+  margin-bottom: 0.9375rem;
+}
+
+.last-slide-cases__title img {
+  width: 100%;
+  height: auto;
+}
+
+.last-slide-cases__text {
+  width: 14.1875rem;
+  margin-bottom: 1.25rem;
+}
+
+.last-slide-cases__text img {
+  width: 100%;
+  height: auto;
+}
+
+.no-webp .last-slide-cases__link{
+  background: url("../img/cases/last-slide/link-bd.png") 0 0.3125rem/100% no-repeat; }
+
+.last-slide-cases__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 13.625rem;
+  font-weight: 700;
+  height: 4.1875rem;
+}
+
+.last-slide-cases__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last-slide-cases__btn {
+  white-space: nowrap;
+  padding: 1.1875rem 1.25rem 1.375rem 1.875rem;
+  border-radius: 60%;
+  font-size: 1rem;
+}
+
+.last-slide-cases__btn::after {
+  display: none;
+}
+
+.last-slide-cases__price {
+  display: block;
+  max-width: 7.5rem;
+}
+
+.last-slide-cases__price img {
+  width: 100%;
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+  height: auto;
 }
 
 .about-hero__scroll {
@@ -2267,9 +2355,9 @@ body {
 .hero-lite__words img {
   width: 100%;
   height: auto;
-  -webkit-transform: scale(2);
-      -ms-transform: scale(2);
-          transform: scale(2);
+  -webkit-transform: scale(2.3);
+      -ms-transform: scale(2.3);
+          transform: scale(2.3);
 }
 
 .hero-lite__words:not(:last-child) {
@@ -3161,6 +3249,19 @@ body {
     display: none;
   }
 
+  .no-webp .last-slide-cases{
+    background: url("../img/cases/slides/5.png") 50%/100% no-repeat; }
+
+  .last-slide-cases {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .last-slide-cases__right {
+    margin-top: 4.375rem;
+  }
+
   .way__pagination {
     display: none;
   }
@@ -3187,6 +3288,10 @@ body {
 }
 
 @media (min-width: 61.99875em) {
+  [class*=__container] {
+    width: 100%;
+  }
+
   .menu-mob {
     display: none;
   }
@@ -3713,6 +3818,10 @@ body {
     max-height: 23.875rem;
   }
 
+  .last-slide-cases__title {
+    width: 14rem;
+  }
+
   .about-hero__body {
     padding: 2.5rem 0rem 5.6875rem;
   }
@@ -3720,6 +3829,10 @@ body {
   .about-hero__logo {
     width: 18.3125rem;
     height: 4rem;
+  }
+
+  .about-hero__top-header:not(:last-child) {
+    margin-bottom: 5.625rem;
   }
 
   .about-hero__image {
@@ -4099,6 +4212,13 @@ body {
     max-width: 23.375rem;
   }
 
+  .last-slide-cases {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .no-webp .about-hero__scroll::after{
     background-image: url("../img/about-hero/mob-shadow.png"); }
 
@@ -4107,7 +4227,11 @@ body {
   }
 
   .about-hero__body {
-    padding: 4.125rem 0rem 4.9375rem;
+    padding: 3.75rem 0rem 4.9375rem;
+  }
+
+  .about-hero__top-header:not(:last-child) {
+    margin-bottom: 3.125rem;
   }
 
   .no-webp .way__scroll::before{
@@ -4627,6 +4751,10 @@ body {
     max-width: 16.375rem;
   }
 
+  .last-slide-cases__btn {
+    padding: 1.4375rem 1.4375rem 1.9375rem 1.875rem;
+  }
+
   .about-hero__btn::before {
     display: none;
     width: 18.125rem;
@@ -4832,6 +4960,8 @@ body {
 
 .webp .videos__scroll::before{ background: url(../img/videos/robot.webp) 50%/100% no-repeat; }
 
+.webp .videos__shadow{ background: url(../img/videos/mob-shadow.webp) 50%/100% no-repeat; }
+
 .webp .left-videos span::after{ background: url(../img/videos/circle.webp) 50%/100% no-repeat; }
 
 .webp .left-videos p::after{ background: url(../img/videos/lines.webp) 50%/100% no-repeat; }
@@ -4853,6 +4983,8 @@ body {
 .webp .cases__scroll::after{ background: url(../img/cases/shadow-left.webp) 50%/cover no-repeat; }
 
 .webp .cases__scroll::before{ background: url(../img/cases/shadow-right.webp) 50%/100% no-repeat; }
+
+.webp .last-slide-cases__link{ background: url(../img/cases/last-slide/link-bd.webp) 0 0.3125rem/100% no-repeat; }
 
 .webp .about-hero__scroll::after{ background: url(../img/about-hero/right-shadow.webp) 50%/cover no-repeat; }
 
@@ -4979,6 +5111,11 @@ body {
 @media (min-width: 26.87375em){
 
   .webp .hero-lite__descr::after{ background: url(../img/hero-lite/line.webp) 50%/100% no-repeat; }
+}
+
+@media (min-width: 47.99875em){
+
+  .webp .last-slide-cases{ background: url(../img/cases/slides/5.webp) 50%/100% no-repeat; }
 }
 
 @media (max-width: 47.99875em){
