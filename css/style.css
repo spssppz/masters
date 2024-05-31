@@ -112,6 +112,16 @@ address {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -329,10 +339,17 @@ address {
 }
 
 .sub-top-header {
-  padding-top: 1.25rem;
   position: absolute;
   top: 100%;
   left: 0;
+  background-color: #fff;
+  padding: 1.25rem 0.625rem 0.625rem;
+  margin-left: -0.625rem;
+  z-index: 2;
+}
+
+.top-header_w .sub-top-header {
+  background-color: #000;
 }
 
 .sub-top-header__item:not(:last-child) {
