@@ -116,6 +116,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -2882,6 +2888,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 1.875rem;
+     -moz-column-gap: 1.875rem;
+          column-gap: 1.875rem;
 }
 
 .no-webp .gift__image{
